@@ -39,3 +39,12 @@
 .blank{
   color:rgb(15, 37, 37)
 }
+.flex{
+  display: flex;
+  align-items: flex-start;
+}
+@media(max-width:477px){
+  .flex{
+    flex-direction: column;
+  }
+}
