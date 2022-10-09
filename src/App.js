@@ -2,13 +2,8 @@ import "./App.css";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-import About from "./components/About";
 import React,{useState} from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+
 
 function App() {
   const [mode,setMode]=useState('light')
@@ -47,20 +42,11 @@ function App() {
   }
   return (
     <>
-    <Router>
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />{ /*it is called props like passing veriables to the html same as templates*/}
       <Alert alert={alert}/>
       <div className="container-fluid">
-      <Routes>
-          <Route path="/about" element={<About/>}>
-            
-          </Route>
-          <Route path="/" element={<Textform heading="Enter the Text To Analyze" mode={mode}/>}>
-            
-          </Route>
-      </Routes>
+        <Textform heading="Enter the Text To Analyze" mode={mode}/>
       </div>
-    </Router>
     </>
   );
 }
