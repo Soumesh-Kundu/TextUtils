@@ -23,7 +23,6 @@ function App() {
 
   document.title=`TextUtils - ${mode.charAt(0).toUpperCase()+mode.slice(1).toLowerCase()} mode`
   const toggleMode=()=>{
-    console.log("hey")
     if(mode==="light")
     {
       setMode('dark')

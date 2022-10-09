@@ -15,7 +15,6 @@ export default function Textform(props) {
     setText("");
   };
   const noOfWords=(word)=>{
-    console.log(word.length)
     if (word[word.length-1]==="" )
     {
       return word.length-1
