@@ -15,7 +15,7 @@ export default function Textform(props) {
     setText("");
   };
   const noOfWords=(word)=>{
-    return text.split(" ").filter(element=>element==="" || element.match(/\n+/)?false:true).length
+    return text.split(" ").filter(element=>!(element==="" || element.match(/\n+/))).length
   }
   const formatOnClick = () => {
     let updatingText = text.split(" ").length !== 0 ? text.split(" ") : null;
