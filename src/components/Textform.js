@@ -15,7 +15,7 @@ export default function Textform(props) {
     setText("");
   };
   const noOfWords=(word)=>{
-    return text.split(/\s+/).filter(element=>!(element==="" || element.match(/\n+/))).length
+    return text.split(/\s+/).filter(element=>!(element==="")).length
   }
   const formatOnClick = () => {
     let updatingText = text.split(" ").length !== 0 ? text.split(" ") : null;
@@ -64,8 +64,7 @@ export default function Textform(props) {
       <div className="container-fluid py-3">
         <h2>Your Text Summery</h2>
         <p>
-          {noOfWords()} word and
-          {text.length} characters
+          {noOfWords()} word and {text.length} characters
         </p>
         <p>
           {noOfWords() * 0.008} Minites to
