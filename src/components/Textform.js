@@ -64,7 +64,7 @@ export default function Textform(props) {
       <div className="container-fluid py-3">
         <h2>Your Text Summery</h2>
         <p>
-          {noOfWords()} word and{" "}
+          {noOfWords()} word and
           {text.length} characters
         </p>
         <p>
